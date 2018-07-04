@@ -1,0 +1,27 @@
+<!--pages/tools/index.wxml-->
+<view class="container">
+  <view class="section">
+  <view class="tui-picker-content">
+  <view class="tui-picker-name">开始日期</view>
+  <picker mode="multiSelector" value="{{startTime}}" bindchange="changeStartTime" bindcolumnchange="changeStartTimeColumn" range="{{startTimeArray}}">
+    <view class="tui-picker-detail">
+      {{startTimeArray[0][startTime[0]]}}-{{startTimeArray[1][startTime[1]]}}-{{startTimeArray[2][startTime[2]]}} {{startTimeArray[3][startTime[3]]}}:{{startTimeArray[4][startTime[4]]}}
+    </view>
+  </picker>
+</view>
+</view>
+
+<view class="section">
+  <view class="tui-picker-content">
+  <view class="tui-picker-name">结束时间</view>
+  <picker mode="multiSelector" value="{{endTime}}" bindchange="changeEndTime" bindcolumnchange="changeEndTimeColumn" range="{{endTimeArray}}">
+    <view class="tui-picker-detail">
+      {{endTimeArray[0][endTime[0]]}}-{{endTimeArray[1][endTime[1]]}}-{{endTimeArray[2][endTime[2]]}} {{endTimeArray[3][endTime[3]]}}:{{endTimeArray[4][endTime[4]]}}
+      <!--:{{endTimeArray[5][endTime[5]]}}  -->
+    </view>
+  </picker>
+</view>
+</view>
+
+<text>{{timeDiff}}</text>
+</view>
